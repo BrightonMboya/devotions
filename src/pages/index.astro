@@ -1,0 +1,88 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import SaintCard from "../components/saintCard.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="flex flex-col items-center bg-[#F2DEBA]">
+    <main class="font-poppins">
+      <section class="text-center">
+        <h3 class="mt-[2rem] font-medium text-4xl text-[#ed5712]">
+          Catholic Devotions
+        </h3>
+        <p class="mt-3 text-lg text-[#a76048]">
+          Curated List of Catholic Novenas to Strenghten your Faith and be
+          closer to God
+        </p>
+
+        <div class="flex items-center flex-col mt-5">
+          <div class="w-[300px] rounded-md h-[400px] mt-5 items-center flex">
+            <img
+              src="https://images.unsplash.com/photo-1584727848247-bd99cdd47b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=728&q=80"
+              alt="mother mary"
+              class="rounded-md object-cover"
+              style="box-shadow: 0.6vmin 0.6vmin pink, 1vmin 1vmin #000,
+				1vmin 1vmin #000, 0.65vmin 1vmin #000, 1vmin 0.65vmin #000;
+				}"
+            />
+          </div>
+          <p class="mt-5">Our Lady Mother Mary</p>
+        </div>
+
+        <div class="space-x-5">
+          <button
+            class="rounded-md bg-[#ed5622] px-4 py-2 font-medium text-white shadow-2xl shadow-blue-500 mt-5"
+            style="box-shadow: 0.6vmin 0.6vmin pink, 1vmin 1vmin #000,
+		1vmin 1vmin #000, 0.65vmin 1vmin #000, 1vmin 0.65vmin #000;
+	}"
+          >
+            Get Started
+          </button>
+
+          <button
+            class="rounded-md bg-[#ed5622] px-4 py-2 font-medium text-white shadow-2xl shadow-blue-500 mt-5"
+            style="box-shadow: 0.6vmin 0.6vmin pink, 1vmin 1vmin #000,
+    1vmin 1vmin #000, 0.65vmin 1vmin #000, 1vmin 0.65vmin #000;
+}"
+          >
+            Pray Together
+          </button>
+        </div>
+
+        <p class="mt-[2rem]">
+          Start Your Devotion by choosing any of the Novenas Below
+        </p>
+      </section>
+
+      <section class="mb-[3rem] flex flex-col items-center">
+        <div class="grid grid-cols-2 space-x-3 mt-5">
+          <SaintCard
+            title="Legio Marie"
+            imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt8_WAxgI5uYNgdrZtuhC0uL_lMfcONb6ZEvc7JXpvGwlxh9AWyM-r3vmCUP7rVrxrcEE&usqp=CAU"
+          />
+          <SaintCard
+            title="Sacred Heart of Jesus"
+            imgUrl="http://1.bp.blogspot.com/-QWEmeiqOL8Q/RglC922zpEI/AAAAAAAAACA/Rtby6S7mgd0/s1600/Sacred+Heart+Jesus+Big.jpg"
+          />
+          <SaintCard
+            title="St Rita of Cascia"
+            imgUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/S.Rita_da_Cascia.jpg/220px-S.Rita_da_Cascia.jpg"
+          />
+          <SaintCard
+            title="Chaplet of Divine Mercy"
+            imgUrl="https://wallpaperaccess.com/full/2389889.jpg"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>Designed by Brighton Mboya</footer>
+  </body>
+</html>
