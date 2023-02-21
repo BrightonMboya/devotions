@@ -18,4 +18,15 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+const prayers = defineCollection({
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		novenaName: z.string().default("A Prayer Title")
+	})
+})
+
+export const collections = {
+	'blog': blog,
+	'prayers': prayers
+};

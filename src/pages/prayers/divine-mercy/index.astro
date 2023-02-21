@@ -1,0 +1,29 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import PrayerPost from "../../../layouts/PrayerPost.astro";
+
+const posts = await getCollection("prayers", ({ id }) => {
+  return id.startsWith("divine-mercy");
+});
+
+console.log(posts);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <main>
+      <section class="grid grid-cols-3 gap-5">
+        {
+          posts.map((post) => (
+            <a href={post.slug}>
+              <button class="px-4 py-3 bg-pink-500 rounded-md text-lg text-white">
+                {post.data.title}
+              </button>
+            </a>
+          ))
+        }
+      </section>
+    </main>
+  </body>
+</html>

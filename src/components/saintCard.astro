@@ -1,19 +1,21 @@
 ---
-const { title, imgUrl } = Astro.props;
+const { title, imgUrl, pageUrl } = Astro.props;
 ---
 
 <section class="w-[170px]">
-  <div class="w-[170px] rounded-md h-[250px] items-center flex">
-    <img
-      src={imgUrl}
-      alt="mother mary"
-      class="rounded-md object-cover h-[230px]"
-      style="box-shadow: 0.6vmin 0.6vmin pink, 1vmin 1vmin #000,
+  <a href={pageUrl}>
+    <div class="w-[170px] rounded-md h-[250px] items-center flex">
+      <img
+        src={imgUrl}
+        alt="mother mary"
+        class="rounded-md object-cover h-[230px]"
+        style="box-shadow: 0.6vmin 0.6vmin pink, 1vmin 1vmin #000,
 				1vmin 1vmin #000, 0.65vmin 1vmin #000, 1vmin 0.65vmin #000;
 				}"
-      height="230"
-    />
-  </div>
+        height="230"
+      />
+    </div>
 
-  <h3 class="text-center">{title}</h3>
+    <h3 class="text-center">{title}</h3>
+  </a>
 </section>
