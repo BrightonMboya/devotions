@@ -1,7 +1,7 @@
 ---
 title: "Fifth Day"
 description: "Today bring to Me THE SOULS OF THOSE WHO HAVE SEPARATED THEMSELVES FROM MY CHURCH,* and immerse them in the ocean of My mercy. During My bitter Passion they tore at My Body and Heart, that is, My Church. As they return to unity with the Church, My wounds heal and in this way they alleviate My Passion."
-slug: "day-5"
+# slug: "day-5"
 novenaName: "The Chaplet of The Divine Mercy"
 ---
 

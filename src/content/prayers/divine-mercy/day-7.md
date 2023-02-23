@@ -1,7 +1,7 @@
 ---
 title: "Seventh Day"
 description: "Today bring to Me THE SOULS WHO ESPECIALLY VENERATE AND GLORIFY MY MERCY,* and immerse them in My mercy. These souls sorrowed most over my Passion and entered most deeply into My spirit. They are living images of My Compassionate Heart. These souls will shine with a special brightness in the next life. Not one of them will go into the fire of hell. I shall particularly defend each one of them at the hour of death."
-slug: "day-7"
+# slug: "day-7"
 novenaName: "The Chaplet of The Divine Mercy"
 ---
 

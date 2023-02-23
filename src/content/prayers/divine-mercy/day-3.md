@@ -1,7 +1,7 @@
 ---
 title: "Third Day"
 description: "Today bring to Me ALL DEVOUT AND FAITHFUL SOULS, and immerse them in the ocean of My mercy. The souls brought Me consolation on the Way of the Cross. They were that drop of consolation in the midst of an ocean of bitterness."
-slug: "day-3"
+# slug: "day-3"
 novenaName: "The Chaplet of The Divine Mercy"
 ---
 

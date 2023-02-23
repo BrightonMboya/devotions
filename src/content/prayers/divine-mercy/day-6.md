@@ -1,7 +1,7 @@
 ---
 title: "Sixth Day"
 description: "Today bring to Me THE MEEK AND HUMBLE SOULS AND THE SOULS OF LITTLE CHILDREN, and immerse them in My mercy. These souls most closely resemble My Heart. They strengthened Me during My bitter agony. I saw them as earthly Angels, who will keep vigil at My altars. I pour out upon them whole torrents of grace. Only the humble soul is capable of receiving My grace. I favor humble souls with My confidence."
-slug: "day-6"
+# slug: "day-6"
 novenaName: "The Chaplet of The Divine Mercy"
 ---
 

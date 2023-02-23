@@ -2,7 +2,7 @@
 title: "Eighth Day"
 description: "Today bring to Me THE SOULS WHO ARE DETAINED IN PURGATORY, and immerse them in the abyss of My mercy. Let the torrents of My Blood cool down their scorching flames. All these souls are greatly loved by Me. They are making retribution to My justice. It is in your power to bring them relief. Draw all the indulgences from the treasury of My Church and offer them on their behalf. Oh, if you only knew the torments they suffer, you would continually offer for them the alms of the spirit and pay off their debt to My justice.
 "
-slug: "day-8"
+# slug: "day-8"
 novenaName: "The Chaplet of The Divine Mercy"
 ---
 

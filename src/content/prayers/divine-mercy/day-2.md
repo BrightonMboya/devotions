@@ -1,7 +1,6 @@
 ---
 title: "Second Day"
 description: "Today bring to Me THE SOULS OF PRIESTS AND RELIGIOUS, and immerse them in My unfathomable mercy. It was they who gave Me strength to endure My bitter Passion. Through them as through channels My mercy flows out upon mankind."
-slug: "day-2"
 novenaName: "The Chaplet of The Divine Mercy"
 ---
 

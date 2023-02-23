@@ -1,7 +1,7 @@
 ---
 title: "Fourth Day"
 description: "Today bring to Me The PAGANS AND THOSE WHO DO NOT YET KNOW ME. I was thinking also of them during My bitter Passion, and their future zeal comforted My Heart. Immerse them in the ocean of My mercy."
-slug: "day-4"
+# slug: "day-4"
 novenaName: "The Chaplet of The Divine Mercy"
 ---
 

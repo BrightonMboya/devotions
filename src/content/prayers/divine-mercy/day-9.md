@@ -1,7 +1,7 @@
 ---
 title: "Ninth Day"
 description: "Today bring to Me SOULS WHO HAVE BECOME LUKEWARM,* and immerse them in the abyss of My mercy. These souls wound My Heart most painfully. My soul suffered the most dreadful loathing in the Garden of Olives because of lukewarm souls. They were the reason I cried out: 'Father, take this cup away from Me, if it be Your will.' For them, the last hope of salvation is to run to My mercy."
-slug: "day-9"
+# slug: "day-9"
 novenaName: "The Chaplet of The Divine Mercy"
 ---
 

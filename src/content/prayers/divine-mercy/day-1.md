@@ -1,7 +1,6 @@
 ---
 title: "First Day"
 description: "Today bring to Me ALL MANKIND, ESPECIALLY ALL SINNERS, and immerse them in the ocean of My mercy. In this way you will console Me in the bitter grief into which the loss of souls plunges Me."
-slug: "day-1"
 novenaName: "The Chaplet of The Divine Mercy"
 ---
 
