@@ -1,93 +1,88 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
-import PrayerPost from "../../../layouts/PrayerPost.astro";
-import divineMercy from "../../../components/openingPrayers/divineMercy.md";
-
+import Layout from "../../../layouts/Layout.astro";
 const posts = await getCollection("prayers", ({ id }) => {
   return id.startsWith("divine-mercy");
 });
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <body class="bg-[#F2DEBA] pl-5">
-    <main class="pt-5">
-      <section>
-        <img
-          src="https://wallpaperaccess.com/full/2389889.jpg"
-          class="w-[300px] h-[200px] object-cover rounded-md shadow-md"
-          alt="cover-photo"
-        />
-        <h3 class="text-xl mt-2 font-medium">Chaplet of Divine Mercy</h3>
-        <div class="space-x-5">
-          <a href="#days">
-            <button
-              class="rounded-md bg-[#ed5622] px-4 py-2 font-medium text-white shadow-2xl shadow-blue-500 mt-5"
-              style="box-shadow: 0.6vmin 0.6vmin pink, 1vmin 1vmin #000,
-      1vmin 1vmin #000, 0.65vmin 1vmin #000, 1vmin 0.65vmin #000;
-    }"
-            >
-              Start A Novena
-            </button>
-          </a>
-
-          <a href="#youtube">
-            <button
-              class="rounded-md bg-[#ed5622] px-4 py-2 font-medium text-white shadow-2xl shadow-blue-500 mt-5"
-              style="box-shadow: 0.6vmin 0.6vmin pink, 1vmin 1vmin #000,
-      1vmin 1vmin #000, 0.65vmin 1vmin #000, 1vmin 0.65vmin #000;
+<Layout title="St. Faustina">
+  <main class="pt-5">
+    <section>
+      <img
+        src="https://wallpaperaccess.com/full/2389889.jpg"
+        class="w-[300px] h-[200px] object-cover rounded-md shadow-md"
+        alt="cover-photo"
+      />
+      <h3 class="text-xl mt-2 font-medium">Chaplet of Divine Mercy</h3>
+      <div class="space-x-5">
+        <a href="#days">
+          <button
+            class="rounded-md bg-[#ed5622] px-4 py-2 font-medium text-white shadow-2xl shadow-blue-500 mt-5"
+            style="box-shadow: 0.6vmin 0.6vmin pink, 1vmin 1vmin #000,
+    1vmin 1vmin #000, 0.65vmin 1vmin #000, 1vmin 0.65vmin #000;
   }"
-            >
-              Follow on Youtube
+          >
+            Start A Novena
+          </button>
+        </a>
+
+        <a href="#youtube">
+          <button
+            class="rounded-md bg-[#ed5622] px-4 py-2 font-medium text-white shadow-2xl shadow-blue-500 mt-5"
+            style="box-shadow: 0.6vmin 0.6vmin pink, 1vmin 1vmin #000,
+    1vmin 1vmin #000, 0.65vmin 1vmin #000, 1vmin 0.65vmin #000;
+}"
+          >
+            Follow on Youtube
+          </button>
+        </a>
+      </div>
+      <article class="mt-3 text-xl">
+        A novena is typically nine days of prayer in preparation of a
+        celebration of a feast day. At the National Shrine of The Divine Mercy,
+        the Chaplet of Divine Mercy Novena is recited perpetually at the Hour of
+        Great Mercy — the three o'clock hour. The Chaplet can be said anytime,
+        but the Lord specifically asked that it be recited as a novena. He
+        promised, "By this Novena (of Chaplets), I will grant every possible
+        grace to souls."
+      </article>
+      <h3 class="mt-3 text-3xl">Intentions</h3>
+      <article class="mt-3 text-xl">
+        For each of the nine days, our Lord gave Saint Faustina a different
+        intention: All mankind, especially sinners; the souls of priests and
+        religious; all devout and faithful souls; those who do not believe in
+        God and those who do not yet know Jesus; the souls who have separated
+        themselves from the Church; the meek and humble souls and the souls of
+        little children; the souls who especially venerate and glorify His
+        mercy; the souls detained in purgatory; and souls who have become
+        lukewarm. "I desire that during these nine days you bring souls to the
+        fountain of My mercy, that they may draw therefrom strength and
+        refreshment and whatever grace they have need of in the hardships of
+        life, and especially at the hour of death" (Diary, 1209).
+      </article>
+
+      <h3 class="mt-5 font-medium text-3xl">Follow the Rosary Along YouTube</h3>
+      <iframe
+        width="350"
+        height="315"
+        id="youtube"
+        src="https://www.youtube.com/embed/p5TGfisOKMM"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </section>
+    <section class="grid grid-cols-3 gap-5 mt-5" id="days">
+      {
+        posts.map((post) => (
+          <a href={post.slug}>
+            <button class="px-4 py-3 bg-pink-500 rounded-md text-lg text-white w-[200px]">
+              {post.data.title}
             </button>
           </a>
-        </div>
-        <article class="mt-3">
-          A novena is typically nine days of prayer in preparation of a
-          celebration of a feast day. At the National Shrine of The Divine
-          Mercy, the Chaplet of Divine Mercy Novena is recited perpetually at
-          the Hour of Great Mercy — the three o'clock hour. The Chaplet can be
-          said anytime, but the Lord specifically asked that it be recited as a
-          novena. He promised, "By this Novena (of Chaplets), I will grant every
-          possible grace to souls."
-        </article>
-        <h3 class="mt-3 text-xl">Intentions</h3>
-        <article class="mt-3">
-          For each of the nine days, our Lord gave Saint Faustina a different
-          intention: All mankind, especially sinners; the souls of priests and
-          religious; all devout and faithful souls; those who do not believe in
-          God and those who do not yet know Jesus; the souls who have separated
-          themselves from the Church; the meek and humble souls and the souls of
-          little children; the souls who especially venerate and glorify His
-          mercy; the souls detained in purgatory; and souls who have become
-          lukewarm. "I desire that during these nine days you bring souls to the
-          fountain of My mercy, that they may draw therefrom strength and
-          refreshment and whatever grace they have need of in the hardships of
-          life, and especially at the hour of death" (Diary, 1209).
-        </article>
-
-        <h3 class="mt-5 font-medium">Follow the Rosary Along YouTube</h3>
-        <iframe
-          width="560"
-          height="315"
-          id="youtube"
-          src="https://www.youtube.com/embed/p5TGfisOKMM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </section>
-      <section class="grid grid-cols-3 gap-5 mt-5" id="days">
-        {
-          posts.map((post) => (
-            <a href={post.slug}>
-              <button class="px-4 py-3 bg-pink-500 rounded-md text-lg text-white w-[200px]">
-                {post.data.title}
-              </button>
-            </a>
-          ))
-        }
-      </section>
-    </main>
-  </body>
-</html>
+        ))
+      }
+    </section>
+  </main>
+</Layout>
