@@ -2,15 +2,8 @@
 import { CollectionEntry, getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
 const posts = await getCollection("prayers", ({ id }) => {
-  return id.startsWith("divine-mercy");
+  return id.startsWith("st-rita");
 });
-const printSlug = () => {
-  posts.map((post) => {
-    console.log(post.id);
-  });
-};
-
-printSlug();
 ---
 
 <Layout title="St. Faustina">

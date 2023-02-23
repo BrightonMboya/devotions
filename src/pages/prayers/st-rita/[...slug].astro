@@ -1,0 +1,23 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import PrayerPost from "../../../layouts/PrayerPost.astro";
+export async function getStaticPaths() {
+  const posts = await getCollection("prayers", ({ id }) => {
+    return id.startsWith("st-rita");
+  });
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+type Props = CollectionEntry<"prayers">;
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<PrayerPost {...post.data}>
+  <article class="mb-5">{post.data.description}</article>
+
+  <Content />
+</PrayerPost>
