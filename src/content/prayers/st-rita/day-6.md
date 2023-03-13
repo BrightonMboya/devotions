@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Day 6"
 description: ""
 ---
 
