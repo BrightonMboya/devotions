@@ -1,0 +1,132 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+const posts = await getCollection("prayers", ({ id }) => {
+  return id.startsWith("sacred-heart");
+});
+---
+
+<Layout title="Sacred Heart">
+  <main class="pt-5">
+    <section>
+      <img
+        src="http://1.bp.blogspot.com/-QWEmeiqOL8Q/RglC922zpEI/AAAAAAAAACA/Rtby6S7mgd0/s1600/Sacred+Heart+Jesus+Big.jpg"
+        class="w-[300px] h-[200px] object-cover rounded-md shadow-md"
+        alt="cover-photo"
+      />
+      <h3 class="text-xl mt-2 font-medium">
+        Short History of Sacred Heart of Jesus
+      </h3>
+      <div class="space-x-5">
+        <a href="#days">
+          <button
+            class="rounded-md bg-[#ed5622] px-4 py-2 font-medium text-white shadow-2xl shadow-blue-500 mt-5"
+            style="box-shadow: 0.6vmin 0.6vmin pink, 1vmin 1vmin #000,
+    1vmin 1vmin #000, 0.65vmin 1vmin #000, 1vmin 0.65vmin #000;
+  }"
+          >
+            Start A Novena
+          </button>
+        </a>
+      </div>
+      <h3 class="font-medium text-xl mt-[2rem]">
+        St. Margaret Mary’s Visions of the Sacred Heart
+      </h3>
+      <article class="mt-[2rem] text-lg">
+        Jesus’ Sacred Heart burns with love for us and meditating on it deepens
+        our gratitude to Him for giving His life for us on the Cross, as well as
+        inspires us to avoid sin and grow in holiness that we might be less
+        unworthy of the gift of Heaven He offers. The Sacred Heart of Jesus is
+        traditionally depicted with a flaming heart that shines with light. His
+        heart is pierced, symbolizing the Roman soldier’s lance that pierced His
+        side on the Cross. It is also shown with Jesus’ Crown of Thorns around
+        it, along with the Cross.
+      </article>
+      <p class="mt-5 text-lg">
+        The Church Fathers referenced Jesus’ heart, but the first millennium did
+        not see widespread devotion to it. In the 1100s and 1200s, St. Bernard
+        of Clairvaux and St. Francis of Assisi promoted fervent devotion to
+        Christ’s suffering in His Passion, in particular His sacred wounds. St.
+        Bernard explained that when Christ’s side was pierced by the lance,
+        Jesus revealed the burning love in His heart for us. In the late 1200s,
+        St. Gertrude extended this devotion based on the visions that Jesus gave
+        to her. The Catechism of the Catholic Church states in paragraph 478
+        that Jesus “has loved us all with a human heart. For this reason, the
+        Sacred Heart of Jesus, pierced by our sins and for our salvation, ‘is
+        quite rightly considered the chief sign and symbol of that…love with
+        which the divine Redeemer continually loves the eternal Father and all
+        human beings’ without exception.” (This is a reference to Pope Pius
+        XII’s encyclical Haurietis Aquas on the Sacred Heart.)
+      </p>
+
+      <article class="mt-3 text-lg">
+        Devotion to the Sacred Heart blossomed even further when Jesus appeared
+        to St. Margaret Mary Alacoque and instructed her in the meaning of His
+        Sacred Heart. Jesus directed her in what the devotion should look like:
+        one should receive Holy Communion on the first Friday of each month,
+        spend a holy hour of adoration before the Eucharist every Thursday, and
+        celebrate the Feast of the Sacred Heart. Jesus gave her a specific
+        instruction to spend an hour every Thursday night meditating on Jesus’
+        Agony in the Garden of Gethsemane (the first Sorrowful Mystery of the
+        Rosary). Jesus told St. Margaret Mary Alacoque that He would make 12
+        promises to those who honor His Sacred Heart:
+      </article>
+
+      <ul class="text-lg space-y-5 list-decimal pl-5 mt-5">
+        <li>
+          I will give them all the graces necessary for their state in life
+        </li>
+        <li>
+          I will establish peace in their families and will unite families that
+          are divided
+        </li>
+        <li>
+          I will console them in all their troubles and will be a refuge for
+          sinners
+        </li>
+        <li>
+          I will be their secure refuge during life, and, above all, in death.
+        </li>
+        <li>I will bestow abundant blessings upon all their undertakings.</li>
+        <li>
+          Sinners will find in My Heart the source and infinite ocean of mercy.
+        </li>
+        <li>
+          Tepid souls will become fervent. Fervent souls will quickly mount to
+          great perfection.
+        </li>
+        <li>
+          I will bless every place where an image of My Heart shall be exposed
+          and honored.
+        </li>
+        <li>
+          I will give to priests the gift of touching the most hardened hearts.
+        </li>
+
+        <li>
+          Those who propagate this devotion will have their names written in My
+          Heart, and I will never forget them.
+        </li>
+        <li>
+          Those who receive Holy Communion on the first Friday of nine
+          consecutive months will obtain complete forgiveness of sins and
+          punishment.
+        </li>
+        <li>
+          I will deliver from purgatory those who have been devoted to My Heart.
+        </li>
+      </ul>
+    </section>
+    <section class="flex flex-col gap-5 items-center mt-5" id="days">
+      {
+        posts.map((post) => (
+          <a href={post.slug}>
+            <button class="px-4 py-3 bg-pink-500 rounded-md text-lg text-white w-[200px]">
+              {post.data.title}
+            </button>
+          </a>
+        ))
+      }
+    </section>
+  </main>
+</Layout>
